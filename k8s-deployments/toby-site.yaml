@@ -1,0 +1,50 @@
+---
+    apiversion:
+    kind:
+    metadata:
+        name:
+    spec:
+        selector:
+            matchLabels:
+                app:
+        replicas: 1
+        template:
+            metadata:
+                labels:
+                    app: tobysite
+            spec:
+                containers:
+                - name:
+                  image:
+                  imagePullPolicy: Always
+
+
+---
+    apiversion:
+    kind: service
+    metadata:
+        name: tobysite-svc
+    spec:
+        selector:
+            app: iansite
+        ports:
+            -
+                name: http
+                port: 80
+                targetport: 80
+                protocol: TCP
+
+---
+    apiversion: networking.k8s.io/v1beta1
+    kind: Ingress
+    metadata:
+        name: tobysite-ingress
+    spec:
+        rules:
+        - hosts: 
+          http:
+            paths:
+            - path: /
+              backend:
+                servicename: tobysite-svc
+                serviceport: 80
