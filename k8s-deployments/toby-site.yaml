@@ -1,6 +1,6 @@
 ---
     apiversion: app/v1
-    kind: Deployemnt
+    kind: Deployment
     metadata:
         name: tobysite
     spec:
