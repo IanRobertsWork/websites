@@ -1,6 +1,6 @@
 ---
-    apiversion:
-    kind:
+    apiversion: 
+    kind: deployemnt
     metadata:
         name:
     spec:
@@ -13,9 +13,9 @@
                 labels:
                     app: tobysite
             spec:
-                containers:
-                - name:
-                  image:
+                containers: 
+                - name: 
+                  image: 
                   imagePullPolicy: Always
 
 
@@ -26,7 +26,7 @@
         name: tobysite-svc
     spec:
         selector:
-            app: iansite
+            app: tobysite
         ports:
             -
                 name: http
@@ -41,7 +41,7 @@
         name: tobysite-ingress
     spec:
         rules:
-        - hosts: 
+        - host: www.tobz0r.co.uk
           http:
             paths:
             - path: /
