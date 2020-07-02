@@ -4,7 +4,7 @@ FROM ubuntu:latest
 
 RUN apt-get update
 
-RUN apt-get install -y python
+RUN apt-get install -y python3.8
 
 RUN pip install -y flask
 
