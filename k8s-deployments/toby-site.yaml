@@ -1,12 +1,12 @@
 ---
-    apiversion: 
-    kind: deployemnt
+    apiversion: app/v1
+    kind: Deployemnt
     metadata:
-        name:
+        name: tobysite
     spec:
         selector:
             matchLabels:
-                app:
+                app: tobysite
         replicas: 1
         template:
             metadata:
@@ -14,14 +14,14 @@
                     app: tobysite
             spec:
                 containers: 
-                - name: 
-                  image: 
+                - name: tobysite
+                  image: tobz0r/websites:1
                   imagePullPolicy: Always
 
 
 ---
-    apiversion:
-    kind: service
+    apiversion: v1
+    kind: Service
     metadata:
         name: tobysite-svc
     spec:
@@ -31,7 +31,7 @@
             -
                 name: http
                 port: 80
-                targetport: 80
+                targetport: 8080
                 protocol: TCP
 
 ---
