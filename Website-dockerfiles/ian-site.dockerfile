@@ -14,7 +14,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY /Websites-code/ian-site/site.py /app
+COPY /Websites-code/Ian-site/site.py /app
 
 CMD site.py
 
