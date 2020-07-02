@@ -2,8 +2,9 @@
 
 FROM ubuntu:latest
 
-RUN apt-get update -y \
-    apt-get install -y python-pip 
+RUN apt-get update
+
+RUN apt-get install -y python-pip 
 
 RUN pip install -y flask
 
