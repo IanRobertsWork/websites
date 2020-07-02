@@ -8,5 +8,5 @@ def home():
     retrun: "This if my first Python website"
 
 
-if _name_ == "_main_"
-app.run()
+if _name_ == "_main_":
+    app.run()
