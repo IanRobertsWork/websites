@@ -7,5 +7,11 @@ RUN apt-get update -y \
 
 RUN pip install -y flask
 
-COPY C:\Users\iarob\git\websites\websites\site.py /var/www/html/
+RUN mkdir /app
+
+WORKDIR /app
+
+COPY /Websites-code/ian-site/site.py /app
+
+CMD site.py
 
