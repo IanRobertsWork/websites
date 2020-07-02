@@ -8,7 +8,7 @@ RUN apt-get install -y python3.8
 
 RUN apt install -y python3-pip
 
-RUN pip install -y flask
+RUN pip3 install -y flask
 
 RUN mkdir /app
 
