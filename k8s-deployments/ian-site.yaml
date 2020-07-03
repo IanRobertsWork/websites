@@ -21,7 +21,7 @@
 
 ---
     apiVersion: v1
-    kind: Services
+    kind: Service
     metadata:
         name: iansite-svc
     spec:
