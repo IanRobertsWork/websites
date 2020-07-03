@@ -16,5 +16,5 @@ WORKDIR /app
 
 COPY /Websites-code/Ian-site/site.py /app
 
-CMD site.py
+CMD py site.py
 
