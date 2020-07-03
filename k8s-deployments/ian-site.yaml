@@ -11,17 +11,17 @@
         template:
             metadata:
                 labels:
-                    app: tobysite
+                    app: iansite
             spec:
                 containers: 
                 - name: iansite
-                  image: tobz0r/websites:1
+                  image: mranarion/testwebsite:1
                   imagePullPolicy: Always
 
 
 ---
     apiVersion: v1
-    kind: Service
+    kind: Services
     metadata:
         name: iansite-svc
     spec:
@@ -30,8 +30,8 @@
         ports:
             -
                 name: http
-                port: 8080
-                targetPort: 80
+                port: 80
+                targetPort: 5000
                 protocol: TCP
 
 ---
@@ -47,4 +47,4 @@
             - path: /
               backend:
                 serviceName: iansite-svc
-                servicePort: 8080
+                servicePort: 80
