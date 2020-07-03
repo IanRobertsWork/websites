@@ -15,7 +15,7 @@
             spec:
                 containers: 
                 - name: iansite
-                  image: mranarion/testwebsite:1
+                  image: mranarion/testwebsite:2
                   imagePullPolicy: Always
 
 
