@@ -1,0 +1,50 @@
+---
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+        name: test-site
+    spec:
+        selector:
+            matchLabels:
+                app: test-site
+        replicas: 1
+        template:
+            metadata:
+                labels:
+                    app: test-site
+            spec:
+                containers: 
+                - name: test-site
+                  image: mranarion/testwebsite:3
+                  imagePullPolicy: Always
+
+
+---
+    apiVersion: v1
+    kind: Service
+    metadata:
+        name: test-site-svc
+    spec:
+        selector:
+            app: test-site
+        ports:
+            -
+                name: http
+                port: 8080
+                targetPort: 80
+                protocol: TCP
+
+---
+    apiVersion: networking.k8s.io/v1beta1
+    kind: Ingress
+    metadata:
+        name: test-site-ingress
+    spec:
+        rules:
+        - host: www.ianaroberts.co.uk
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: test-site-svc
+                servicePort: 8080
