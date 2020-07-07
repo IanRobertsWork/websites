@@ -15,7 +15,7 @@
             spec:
                 containers: 
                 - name: test-site
-                  image: tobz0r/websites:1
+                  image: mranarion/testwebsite:2
                   imagePullPolicy: Always
 
 
