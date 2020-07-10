@@ -48,3 +48,10 @@
               backend:
                 serviceName: tobysite-svc
                 servicePort: 8080
+        - host: tobz0r.co.uk
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: tobysite-svc
+                servicePort: 8080
