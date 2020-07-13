@@ -18,7 +18,6 @@ spec:
         name: jenkins
       name: jenkins
     spec:
-      serviceAccountName: jenkins
       containers:
       - env:
         - name: JAVA_OPTS
@@ -108,5 +107,5 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: default
+  storageClassName: do-block-storage
   volumeName: jenkins
