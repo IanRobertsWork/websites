@@ -7,7 +7,7 @@
         selector:
             matchLabels:
                 app: tobysite
-        replicas: 3
+        replicas: 1
         template:
             metadata:
                 labels:
