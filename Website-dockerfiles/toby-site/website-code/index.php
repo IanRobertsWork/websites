@@ -2,9 +2,14 @@
 <?php include "inc/nav.php"; ?>
 
 <body>
-    
-    <h1>A Brave New World</h1>
-    
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">welcome traveller</h3>
+        </div>
+        <div class="panel-body">
+            here you will find content
+        </div>
+    </div>
 </body>
 
 <?php include "inc/footer.php"; ?>
