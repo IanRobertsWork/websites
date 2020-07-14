@@ -15,7 +15,7 @@
             spec:
                 containers: 
                 - name: tobysite
-                  image: tobz0r/websites:4
+                  image: tobz0r/websites:8
                   imagePullPolicy: Always
 
 

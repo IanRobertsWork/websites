@@ -1,3 +1,26 @@
-body {
-    background-color: white;
+#fry {
+    opacity: 0.1;
+}
+
+a {
+    color: #32a89e;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#327fa8;
+}
+
+#novideo {
+    display: none;
+}
+
+@media screen and (max-width:800px){
+    #videos {
+        display: none;
+    }
+
+    #novideo {
+        display: block;
+    }
 }
