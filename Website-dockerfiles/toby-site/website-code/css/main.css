@@ -1,7 +1,3 @@
-#fry {
-    opacity: 0.1;
-}
-
 a {
     color: #32a89e;
 }
@@ -13,6 +9,10 @@ a:hover {
 
 #novideo {
     display: none;
+}
+
+#homescreen-img {
+    opacity: 0.5;
 }
 
 @media screen and (max-width:800px){
